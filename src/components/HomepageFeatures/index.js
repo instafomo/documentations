@@ -25,7 +25,7 @@ const FeatureList = [
         to match your brand.
       </>
     ),
-    link: "/docs/getting-started/overview#step-1-create-a-campaign",
+    link: "/getting-started/overview#step-1-create-a-campaign",
     buttonName: "Create Campaign",
   },
   {
@@ -37,7 +37,7 @@ const FeatureList = [
         displaying real-time notifications.
       </>
     ),
-    link: "/docs/getting-started/overview#step-3-add-the-pixel-code",
+    link: "/getting-started/overview#step-3-add-the-pixel-code",
     buttonName: "Setup Pixel",
   },
 ];
