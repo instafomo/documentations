@@ -19,7 +19,7 @@ const config = {
   url: "https://instafomo.com",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: "/docs/",
+  baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -125,7 +125,7 @@ const config = {
       navbar: {
         logo: {
           alt: "My Site Logo",
-          src: "/docs/img/logo.png",
+          src: "/img/logo.png",
         },
         items: [
           {
