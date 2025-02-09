@@ -5,7 +5,7 @@ description: "Retrieve a specific notification"
 sidebar_label: "Retrieve a specific notification"
 hide_title: true
 hide_table_of_contents: true
-api: eJyNU9Fu2jAU/ZXoPG2SCyEdQ/gNVWhC6taq2p4qhC7JhXhzbNc2VVGUf5+cAgX2srxEts+9Puee4xbWsaeorFlUkPAcveJX/mGj2qiyP4CAI08NR/YB8rmFoYYhYc5AK1VBQBlIOIo1BDy/7JTnCjL6HQuEsuaGIFvEvUvlykTeskfXLRM6OGsChwQo8jz9Kg6lV67nIHFOKas4ktJhAIHSmsgmpgJyTh8Qw98hVbXgN2qc5r4fxf5+VUGOBEpqHKltTz2tL+T84T0kqi+TcVEVUxqPJzTdVOXXyTqnKRWTcs236xHEcRbzhpTO7qzWXEbrIY4q599ni/vV3cP9/fzu58MTBALHqMw2Ke0EVFixobVOg9qQDiygKcRVRZGjSr3NTmuBjzWKfDS9ycc3xTQrCnmby2KKrv/E1cyeDnZmlAXHZZKXmUtrG461TdZvOfZOxxoSw3NUGLZXVne9DP96DMTOa0jUMbogh8PSmmA1D5QJkTa2sYPSNkNyCslpZTa2T4GKyRYsjqhs9riAQGr6zn40yAc5rjXNHhfZxvqsIUNbZbYXgkKmTHbqOEAn4GyIDfVZOHj1H1O5uPKU2Mhvceg0KZMa96Lbw8SeL+ITICCvn8dSoLYhJmzbrinwL6+7Lm2/7NjvIZ+XAq/kVUpDP9ZKhctkXNE6RR+fng6v7XP2Eb1LuodNMvs0ZNK7tILAe9KvyXbLTqBmqtj3VN5Rs7JkF8/q/3lxyeFTpL7Nf6Lr/gLycoA6
+api: eJyNlF1v2jAUhv9KdK42yYWQjiF8xyo0IXVrVW1XFUKH5JB4dWzXPlRlkf/75BQosJvmJrJzvt7Xj9OBdeSRlTWLCiR4Yq/ohX5aVhtV9h9AgEOPLTH5APKxA4MtgYTZlhvr1d9DlDIgoSGsyIMAT89b5akCyX5LAkLZUIsgO+CdS+mBvTI1CKBXbJ1OW98IPfmsQ6dWT7SLEKM4tjMnM61UdWjokJuPtFOGqSYPMS5TdHDWBAopoMjz9KoolF65XoyEUweyihiVDgMQUFrDZDgloHN6HzH8E1JW966lgwq5768qkCMBJbYOVd2PntZncp5oBxKqL5NxURVTHI8nON1U5dfJOscpFpNyTdfrEYiDF/MWlc5urNZUsk1271XOf8wWt6ubu9vb+c2vuwcQEIhZmTopjQJUWJHBtU5GbVAHEqAx8KpCJlapttlqLeB9DUU+ml7l46timhWFvM5lMYXYP+LCs4c9PRlmwVGZ5GXmnKSWuLGJtJq4B4sbkDA8jQrD7uKoYy/Dvxz423qdSGN2QQ6HpTXBahooExg3trWD0rZDdArSSSuzsT0FinvEFoeobHa/AAGp6Nv0o0E+yOFS0+x+kW2sz1o0WCtTnwkKmTLZseIAogBnA7fYs7A/qw+4ctbySCzTKw+dRmVS4V50t3fs8QyfAALk5fVYCmhs4BTbdWsM9NvrGNP285b8DuTjUsALepVo6G2tVDgn42KsI/rw6WF/2z5n7+idj7vfRLNLJqPephUIeCP9cti4jOLw60ijvEXNypIcn+T/d+PSCR+R+j7/BTH+A9unpn4=
 sidebar_class_name: "get api-method"
 info_path: api/notifications/instafomo-api
 custom_edit_url: null
@@ -47,7 +47,7 @@ Retrieve a specific notification
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"notification_id","in":"path","required":true,"schema":{"type":"integer"}}]}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}},{"name":"notification_id","in":"path","required":true,"schema":{"type":"integer"}}]}
 >
   
 </ParamsDetails>

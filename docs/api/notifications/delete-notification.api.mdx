@@ -5,7 +5,7 @@ description: "Delete a notification"
 sidebar_label: "Delete a notification"
 hide_title: true
 hide_table_of_contents: true
-api: eJx1kkFr3DAQhf+KeKcGhL0tPekWyB4WSgmhPS1LUezxWlSWHM041Bj99yJnk+5uk5Pl4Wn0vjezII6UrLgYdi0MWvIk9D2K61yzlqEx2mQHEkoMs18Q7EAwCGeiX66FhgswGK300Ej0NLlELYykiTS46WmwMAtkHst1F4SOlJDzoah5jIGJi+DL5mv5tMRNcuPqweDcknpx2SqemoaYu8n7uULO+urS3apTVoVLoIGkj/9wV0TpYVCfC7lerhgzNJjS82sSU/Iw6EVGNnXdxMDRU+UCi+3iEKsmDrUdHQqiC11c8Z34wr97Vanb+x00StMX15+rTbXBNcvt/U51ManBBnt04XjBxMoF9daxQtYYI8tgQ3nyNLCP0rh4520+Qn+kHr11oXRbSZdTTPuL2TM0zPUyHDT6yFK0y/JomX4mn3MpP02UZpj9QePZJmcfSxr7Ba3jcm5hOuuZ/rPVxCAUBAafHk67daOg37d7Ktowl2Stn8ofNH7T/M7m5kM+24m77bftjy1y/gt1vxTG
+api: eJyNkkFr3DAQhf+KeacWhL0tPem2JXtYKCWU9rQsYWKP1yK2pGjkENfovxc5u+nuJoWeJA1PM/O+mRnOc6BonN020Gi458jfXTStqZcwFDwFGjhyEOjdDEsDQ2M9xs4F8/ukMhYaHVPDAQqBH0cTuIGOYWQFqTseCHpGnHz+LjEYe4ACP9Pg+xz6yhQ4FDN5c/fAU0JK6rWcPevpzjSngp5i9z/ljI184ICU9lkt3llhyYLPqy/5aFjqYPxiRuOcQPECpSlkrGsWace+n8rc3NWnm0VXUGEv+Q0cO/eX7kI0dtCozoVSzVceExSEw9MJ/Bj6jDhGL7qqamfF9VwaK5FaN7iydkNF3iBbNLZ1i30TF7bbk6pY326hkJO+dP2pXJUrXHtZ326L1oViIEsHYw8XnqQwtnjNWCIpeCdxIJtLHgf2LxoXdV7nE/k5Vr4nY3O2xel8xLS7mL1AQV8vw16hcxKzdp7vSfhX6FPK4ceRwwS92ys8UTB0n2nsZjRG8r2BbqkXftNW7WxkG6Hx4cdxtz4WUO+3ewySnTJZ6sf8gsIDT+9sbtqns5242Xzb/NwgpT84IDsK
 sidebar_class_name: "delete api-method"
 info_path: api/notifications/instafomo-api
 custom_edit_url: null
@@ -47,7 +47,7 @@ Delete a notification
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"notification_id","in":"path","required":true,"schema":{"type":"integer"}}]}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}},{"name":"notification_id","in":"path","required":true,"schema":{"type":"integer"}}]}
 >
   
 </ParamsDetails>

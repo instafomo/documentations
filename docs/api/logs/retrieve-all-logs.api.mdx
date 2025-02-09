@@ -5,7 +5,7 @@ description: "Retrieve all logs"
 sidebar_label: "Retrieve all logs"
 hide_title: true
 hide_table_of_contents: true
-api: eJy9VNuK2zAQ/RUxD31SHdttKAhKCXRpF/qwLNunEILWGSfqypIqjbMbgv+9jOJkr/QKzUusy8ycMzpz9uADRk3Gu/MVKIhI0eAWZ9Z+8esEEoKOukPCmEDN9+B0h6Ag6DWCBONAwfce4w4krDA10QTOBQquNij4lnB9d41R0EaT2Ple3GpHImLqLSXRRt8V4iO2Oi/Ji6oACRG/9ybiClSrbUIJqdlgp0HtgXaBARhHuMaYy+ZgUNUwyBPAscAyYFz+Guxnfys67XYnXCegAWOmUYiZtf4WV2KrbY9J6IhKVKUU9VSKaSlFVeZFyavDsnzMrJ7+NbV6KgFd34GaV6Wsp3JaSq7H5bgaF1sMw4LTp+BdwsQJ67Lkv8dcZ8KaRMK3wvp1YkiNd4SO+KoOwZom62HyLfH9PeCd7oLFnEmTzjIYoVq/Nq5IfdNgYrGYAAqq+l1RFmVRZQZb0+ByvN75a2NxrGgcOlo2fsUnZ1/zbu8o7o5751e8Z2i3HN/00nccvNKEZPJOXdbV67J+Xb4RVa3qSr0tgbvQIeWO5pdXlXwuh9xS8qRtPs9f+SSxkCRY425yD1sTE4GCDVFIajJpvEveYmFcIt36zheN7yY6mAm388MrzvGeqVv9d3EO7wiU662VECJuj98Jbfvn+Yb8e6r3y3HMhbY2ywByzzaePWCNlOeeNqBgMp4mjNujB/TR/g6Q/BLGtT5r25DNj3q8JWYX5yCBkx4wVSyaZ5M5uzgXrY9iNCbj1hmvME6cUhUwSAg+UaezYI9yeYHko+QnGRPe0SRYbRxnyvT2YwPmkCMXEjae33MO+/21Tvg12mHg7YOhcFtWJulr+2CynxQ7jdm/eeOLmG9wd+/K2aFAAbAf/j6q/2iCP+HwgnHf81nwIhomBGq+GCRsUK8w5v4f4mdNg4EeRD2ztNEgDmL/dHYFw/ADH2lUKA==
+api: eJy9VU1v4zYQ/SvEHHriypJaowCBReGii9ZAD4tF9mQYBiONbDYUySVHTlxB/70YWnaSTdD9KFBfbA45M+8NH59H8AGjJuPdugUFESkaPOLK2j/9PoGEoKPukTAmUJsRnO4RFKwGOvho/s6ZIME4UHBA3WIECRE/DSZiC4rigBJSc8BegxqBToHTE0Xj9iABH3QfLId+RR0xilEHs7vD0wTTJK/tgt7jpcunAeMJJLSYmmhCBqDg5oCCTwk39LcYBR00iZMfxL12JCKmwVISXfR9IX7DTucleVEVz/B22qbXABtHuM/c2nMyqOopwLnBLmDcfRnsH/5e9NqdrriuQAPGTKMQK2v9PbbiqO2ASeiISlSlFPVSimUpRVXmRcmr87J8zqxefje1eikB3dCD2lSlrJdyWUrux+24GzfbTtOWy6fgXcLEBeuy5K/nXFfCmkTCd8L6fWJIjXeEjvioDsGaJoto8Vfi8+OjJEZoNemsuhmq9XvjijQ0DSbWpgmgoKp/LsqiLKrM4Gga3M3He39rLM4djUNHu8a3vPPuY44OjuLpElvfcMzQaTff6Qffc3KrCcnkSF3W1ZuyflP+KKpa1ZX6qQSeQo+UJ5pvXlXypRzySMmTtnk//8o7iYUkwRp3l2fYmZiI3xJRSGqxaLxL3mJhXCLd+d4Xje8XOpgFj/OXH7jGW6Zu9fflOXwgUG6wVkKIeLz8Tmi7b6835c/nev8wu4rQ1mYZQJ7ZwbPl7JGyzdABFCzm3YTxeLGcIdqvAZJvwrjOZ20byq6yvpwSq/drkMBFz5gqFs2Ll7l6vxadj2L2QeP2Ga8wTlxLFTBJCD5Rr7NgL3J5heSz4lcZEz7QIlhtHFfK9MZ5ABvImVsJB8/3uYFxvNUJP0Y7TRw+GwqPpTVJ39onL/uzZtdn9t+88VXMd3h6dOXsUKAA2A+/HtX/aIL/wuEV437ks+VFNEwI1GY7yctfHM//nL9qGgz0JOuFpc0GcRb77+9uYJr+Abxjemw=
 sidebar_class_name: "get api-method"
 info_path: api/logs/instafomo-api
 custom_edit_url: null
@@ -47,7 +47,7 @@ Retrieve all logs
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"page","in":"query","description":"The page number that you want results from. Defaults to 1.","required":false,"schema":{"type":"integer","default":1}},{"name":"results_per_page","in":"query","description":"How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.","required":false,"schema":{"type":"integer","default":25,"enum":[10,25,50,100,250,500,1000]}}]}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}},{"name":"page","in":"query","description":"The page number that you want results from. Defaults to 1.","required":false,"schema":{"type":"integer","default":1}},{"name":"results_per_page","in":"query","description":"How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.","required":false,"schema":{"type":"integer","default":25,"enum":[10,25,50,100,250,500,1000]}}]}
 >
   
 </ParamsDetails>

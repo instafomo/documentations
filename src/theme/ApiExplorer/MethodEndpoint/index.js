@@ -8,7 +8,6 @@ const MethodEndpoint = () => {
 
   return (
     <div>
-      <h1>API Method Endpoint</h1>
       <p>State Value: {value}</p>
     </div>
   );

@@ -5,7 +5,7 @@ description: "Retrieve user information"
 sidebar_label: "Retrieve user information"
 hide_title: true
 hide_table_of_contents: true
-api: eJx9U01v2zAM/SsGz0piB+hFpxVrMWTYodjaU1EErM3Y2mRJk+ggreH/PlB2un4MMwxIosjHR/JpBB8oIhvvdg1oiMTR0JHuEkVQECkF7xIl0CNsy1KWhlIdTZAQ0CCOhXEHH/uMUjTEaGxag4LaOybHEoQhWFNnj83PJJEj0An7YCljIqOsRjhUoICfAoGGIVFMoIB6NBb0OeTTsq5r34OCR2Otca0ALHGBYvIOLShw2Ivlq+9cceUJFGDTREoJNHzzkfpiF9IgMLXhJ9Bw5a2PxQ/DuYLBZeNlT3J+NgE0XJRleb6McgsKQucdzVvG0z4XAgpM2pPDR0sNaI4DKQgW3XxdD4kz/2yiUzDzIPYNskBty+3Fqtquqm1Rljr/Z+dEzMa1MpZpMXE0aPdNZnFAm2hSYNG1A7YCRq61JnVCz/T0PJO9u/38ug43WKvgb/ZyVVarsnqd3WLiPdZsjnOz/u3FntHurW+NS6Crcsqfeied74vWiuGdhkBBT9x5aVKb+x6QO9CwGWZZJopHEYa+H2GIIoyOOSS92dTeJW9pbVxiPPjei0Q2GAxMDwokR1aJYdEd7M5exeXNDhQI6MytWpdrqeQt48ubXXHwsVheiXHtB+6FccUL7BpkOj5xj1nxixb/V/ibhC96ZjrxJlg0ThBzyePSlPv8SOBBQecTy3kcHzHRXbTTJObfA8lw7x8UHDEaEaOcJgUdYUMxd/EXZZXXNQXp9xHtIHk/PFvp4stsvlzfwjT9AZq6ajU=
+api: eJx9VE1v2zAM/SsGz0riBOjFp3XrMGTYodjWU1EErM3YXGVJleggreH/PlBJmn4MMwzIokTy8fHRI/hAEYW9WzdQQSSJTDu6SRTBQMCIPQnFBNXtCA57ggouB+l85OfsBgbYQQUdYZN9Ij0OHKmBSuJABlLdUY9QjSBPQd2TRHYtGKA99sGq6TNhpFiMGHjzQE8TTNOdRkrBu0RJnVdlqUtDqY4ccuYKFGbBbutjn8EUDQmyTXMwUHsn5ESdMATLdb6x+JPUczwnH6FByfhYGViCOQEdkhZugHpkC9XJ5dNxnde+BwP3bK3Wcy4wUEzeoQVzYuy771xx5QkMYNNESgkq+OEj9cU6pEHD1CxPUMGVtz4Wv1hyBYPLxsuedP/MASq4KMvydBj1VPvUeUeHT8H9JheijUkbcnhvz80IFt3huB6SZPzZRPvABxlsGhQNtSpXF7PlarZcFWVZ5fd0OZEIu1bbMh1NEhntpskotmgTTQYsunbAVoORay2nTuFxT88HsDe/v7yuww3WGjhnL2flclYuX2e3mGSDtfDuQNa/b4kXtBvrW3YJqmU55ce8k87Po9KL4Z2GwEBP0nklqc28B5QOKlgMh6FIFHeniRiiCqMTCalaLGrvkrc0Z5cEt773KpEFBgaVs+bIKmHJol+fbhWX12swoEEP2Jbzcq6VvEV8eb0utj4Wxxll137AXrArXsLOQbvjk/SYFX/U4v8Kf5PwRc9Ce1kEi+w0Yi55PJJym4cE7gx0Ponux/EeE91EO01qfhxIm3t7Z2CHkVWMupvM6YehLD5QVnldU1C+d2gHzfthbJXFl958+/obpukv2pWV4w==
 sidebar_class_name: "get api-method"
 info_path: api/user/instafomo-api
 custom_edit_url: null
@@ -38,8 +38,16 @@ import Heading from "@theme/Heading";
 
 Retrieve user information
 
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
 <ParamsDetails
-  parameters={undefined}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}}]}
 >
   
 </ParamsDetails>
