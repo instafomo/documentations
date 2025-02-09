@@ -1,0 +1,367 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Instafomo Campaigns API",
+        "version": "1.0.0",
+        "description": "API for managing campaigns in Instafomo."
+    },
+    "servers": [
+        {
+            "url": "https://console.instafomo.com/api"
+        }
+    ],
+    "paths": {
+        "/campaigns/": {
+            "get": {
+                "summary": "Retrieve all campaigns",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "description": "Bearer token",
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer <api-key>"
+                        }
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number that you want results from. Defaults to 1.",
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "results_per_page",
+                        "in": "query",
+                        "description": "How many results you want per page. Allowed values: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.",
+                        "schema": {
+                            "type": "integer",
+                            "enum": [
+                                10,
+                                25,
+                                50,
+                                100,
+                                250,
+                                500,
+                                1000
+                            ],
+                            "default": 25
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "pixel_key": "1234567890abcdef",
+                                            "name": "Example",
+                                            "domain": "example.com",
+                                            "branding": {
+                                                "name": "",
+                                                "url": ""
+                                            },
+                                            "email_reports_is_enabled": true,
+                                            "email_reports_last_datetime": "2019-05-22 23:40:17",
+                                            "is_enabled": true,
+                                            "last_datetime": null,
+                                            "datetime": "2019-05-22 23:40:17"
+                                        }
+                                    ],
+                                    "meta": {
+                                        "page": 1,
+                                        "results_per_page": 25,
+                                        "total": 1,
+                                        "total_pages": 1
+                                    },
+                                    "links": {
+                                        "first": "https://console.instafomo.com/api/campaigns?&page=1",
+                                        "last": "https://console.instafomo.com/api/campaigns?&page=1",
+                                        "next": null,
+                                        "prev": null,
+                                        "self": "https://console.instafomo.com/api/campaigns?&page=1"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Create a new campaign",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "description": "Bearer token",
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer <api-key>"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "domain_id": {
+                                        "type": "integer",
+                                        "description": "Domain ID."
+                                    },
+                                    "name": {
+                                        "type": "string",
+                                        "description": "Name of the campaign.",
+                                        "example": "Example"
+                                    },
+                                    "domain": {
+                                        "type": "string",
+                                        "description": "Domain associated with the campaign.",
+                                        "example": "example.com"
+                                    },
+                                    "branding_name": {
+                                        "type": "string",
+                                        "description": "Branding name."
+                                    },
+                                    "branding_url": {
+                                        "type": "string",
+                                        "description": "Branding URL."
+                                    },
+                                    "email_reports": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        },
+                                        "description": "Notification handler IDs."
+                                    },
+                                    "is_enabled": {
+                                        "type": "boolean",
+                                        "description": "Whether the campaign is enabled."
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "domain"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Campaign created successfully",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/campaigns/{campaign_id}": {
+            "get": {
+                "summary": "Retrieve a specific campaign",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "description": "Bearer token",
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer <api-key>"
+                        }
+                    },
+                    {
+                        "name": "campaign_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the campaign to retrieve.",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1,
+                                        "pixel_key": "1234567890abcdef",
+                                        "name": "Example",
+                                        "domain": "example.com",
+                                        "branding": {
+                                            "name": "",
+                                            "url": ""
+                                        },
+                                        "email_reports_is_enabled": true,
+                                        "email_reports_last_datetime": "2019-05-22 23:40:17",
+                                        "is_enabled": true,
+                                        "last_datetime": null,
+                                        "datetime": "2019-05-22 23:40:17"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "summary": "Update a campaign",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "description": "Bearer token",
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer <api-key>"
+                        }
+                    },
+                    {
+                        "name": "campaign_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the campaign to update.",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": false,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "domain_id": {
+                                        "type": "integer"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "domain": {
+                                        "type": "string"
+                                    },
+                                    "branding_name": {
+                                        "type": "string"
+                                    },
+                                    "branding_url": {
+                                        "type": "string"
+                                    },
+                                    "email_reports": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "is_enabled": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Campaign updated successfully",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "summary": "Delete a campaign",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "description": "Bearer token",
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer <api-key>"
+                        }
+                    },
+                    {
+                        "name": "campaign_id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of the campaign to delete.",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Campaign deleted successfully"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "scheme": "bearer",
+                "bearerFormat": "JWT"
+            }
+        }
+    }
+}

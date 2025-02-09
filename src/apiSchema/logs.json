@@ -1,0 +1,87 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Instafomo API",
+        "version": "1.0.0",
+        "description": "API for retrieving logs in Instafomo."
+    },
+    "servers": [
+        {
+            "url": "https://console.instafomo.com/api"
+        }
+    ],
+    "paths": {
+        "/logs": {
+            "get": {
+                "summary": "Retrieve all logs",
+                "operationId": "retrieveAllLogs",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number that you want results from. Defaults to 1.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "results_per_page",
+                        "in": "query",
+                        "description": "How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 25,
+                            "enum": [
+                                10,
+                                25,
+                                50,
+                                100,
+                                250,
+                                500,
+                                1000
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of logs.",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": [
+                                        {
+                                            "type": "login.success",
+                                            "ip": "127.0.0.1",
+                                            "device_type": "mobile",
+                                            "continent_code": "EU",
+                                            "country_code": "IT",
+                                            "city_name": "Rome",
+                                            "datetime": "2021-02-03 12:21:40"
+                                        }
+                                    ],
+                                    "meta": {
+                                        "page": 1,
+                                        "results_per_page": 25,
+                                        "total": 1,
+                                        "total_pages": 1
+                                    },
+                                    "links": {
+                                        "first": "https://console.instafomo.com/api/logs?&page=1",
+                                        "last": "https://console.instafomo.com/api/logs?&page=1",
+                                        "next": null,
+                                        "prev": null,
+                                        "self": "https://console.instafomo.com/api/logs?&page=1"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

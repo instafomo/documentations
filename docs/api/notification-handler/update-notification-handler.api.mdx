@@ -1,0 +1,71 @@
+---
+id: update-notification-handler
+title: "Update a notification handler"
+description: "Update a notification handler"
+sidebar_label: "Update a notification handler"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFVMlu2zAQ/RVhTi3AWEmPvKW91Jc2aJOTYRhjamQx4RaSSmsI+vditDhOoqS6kOI8vtkepwMfKGLW3q0rkNCGCjP98FnXWg3H39FVhiIICBjRUqaYQG46cGgJJLgz7K4ZwTtdgQDtQELA3ICASI+tjlSBzLElAUk1ZBFkB/kYmEa7TAeK0PfbEU0pf/XVkSHKu0wu89a2JuuAMZe1j/aiwjyQvKHz+3tSmYOOnGDWlNg6xnxCpRy1O0AvpoPXBgHkWgtyA2RRGxDwh/aN9w8gIBlUvFY6KR8530yGDhEtCLBaRZ98nXeZ0CbY9mKiWHI+ky7ZRjdLltnxYjpzKB8Zd6rBzK1aAum0I4d7Q+fmvfeG0EE/fNynFLxLY22/XF7yUlFSUQeWA0g4V1IxqaMYRVYVqVWKUqpbY44rEOd9xhDMdK28T0zVAf1FG8zQprnvHPzVHM1Lz3eDkwILtxACt4hy41nywadBKCxUCeU5/GKCp7J7R+Y9K4Hi0/wo2mhAQpNzSLIslXfJG1pplzLW3vqV8rbEoIFVrl3th+LqzFnBekYV1zdrEMCkYy5Xq8vVJbzO8PpmXdQ+FhYdHrQ7LGaaCu2KE/OKW8sJW3TP7+G/tXrh96SGTH9zGQxqx6xD5t1Uxg0slhEEyPfmxVZAw52QG+i6PSa6i6bv+fixpXgEudkKeMKoWZRDrSudJoHWaBK9CfMkJ/j0axo/nwsQy+FPh+iOXHk0Lf+BgAc6fjDken7YDWFFcQhpRH8bHV/cMucz29Ls6sV86VopCvkM/uYJsGZOqr35+fsWBOynEWl9xXeYeOAVz1u52fZ9/w+0KBF6
+sidebar_class_name: "post api-method"
+info_path: docs/api/notification-handler/instafomo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a notification handler"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notification-handlers/{notification_handler_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update a notification handler
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"notification_handler_id","in":"path","required":true,"schema":{"type":"integer"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"name":{"type":"string"},"type":{"type":"string","enum":["email","webhook","slack","discord","telegram","microsoft_teams"]},"email":{"type":"string"},"webhook":{"type":"string"},"slack":{"type":"string"},"discord":{"type":"string"},"telegram":{"type":"string"},"telegram_chat_id":{"type":"string"},"is_enabled":{"type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Notification handler updated successfully.","content":{"application/json":{"example":{"data":{"id":1}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

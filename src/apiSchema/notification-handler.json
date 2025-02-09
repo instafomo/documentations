@@ -1,0 +1,309 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Instafomo API",
+        "version": "1.0.0",
+        "description": "API for managing notification handlers in Instafomo."
+    },
+    "servers": [
+        {
+            "url": "https://console.instafomo.com/api"
+        }
+    ],
+    "paths": {
+        "/notification-handlers": {
+            "get": {
+                "summary": "Retrieve all notification handlers",
+                "operationId": "retrieveAllNotificationHandlers",
+                "parameters": [
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "description": "The page number that you want results from. Defaults to 1.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 1
+                        }
+                    },
+                    {
+                        "name": "results_per_page",
+                        "in": "query",
+                        "description": "How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.",
+                        "required": false,
+                        "schema": {
+                            "type": "integer",
+                            "default": 25,
+                            "enum": [
+                                10,
+                                25,
+                                50,
+                                100,
+                                250,
+                                500,
+                                1000
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "A list of notification handlers.",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": [
+                                        {
+                                            "id": 1,
+                                            "type": "email",
+                                            "name": "Work email",
+                                            "settings": {
+                                                "email": "hey@example.com"
+                                            },
+                                            "is_enabled": true,
+                                            "last_datetime": null,
+                                            "datetime": "2021-06-27 22:16:23"
+                                        }
+                                    ],
+                                    "meta": {
+                                        "page": 1,
+                                        "results_per_page": 25,
+                                        "total": 1,
+                                        "total_pages": 1
+                                    },
+                                    "links": {
+                                        "first": "https://console.instafomo.com/api/notification-handlers?&page=1",
+                                        "last": "https://console.instafomo.com/api/notification-handlers?&page=1",
+                                        "next": null,
+                                        "prev": null,
+                                        "self": "https://console.instafomo.com/api/notification-handlers?&page=1"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Create a new notification handler",
+                "operationId": "createNotificationHandler",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "description": "The name of the notification handler."
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "email",
+                                            "webhook",
+                                            "slack",
+                                            "discord",
+                                            "telegram",
+                                            "microsoft_teams"
+                                        ],
+                                        "description": "The type of the notification handler."
+                                    },
+                                    "email": {
+                                        "type": "string",
+                                        "description": "Email address (only for type=email)."
+                                    },
+                                    "webhook": {
+                                        "type": "string",
+                                        "description": "Webhook URL (only for type=webhook)."
+                                    },
+                                    "slack": {
+                                        "type": "string",
+                                        "description": "Slack webhook URL (only for type=slack)."
+                                    },
+                                    "discord": {
+                                        "type": "string",
+                                        "description": "Discord webhook URL (only for type=discord)."
+                                    },
+                                    "telegram": {
+                                        "type": "string",
+                                        "description": "Telegram API Token (only for type=telegram)."
+                                    },
+                                    "telegram_chat_id": {
+                                        "type": "string",
+                                        "description": "Telegram Chat ID (only for type=telegram)."
+                                    },
+                                    "x_consumer_key": {
+                                        "type": "string",
+                                        "description": "X Telegram API Token."
+                                    },
+                                    "x_consumer_secret": {
+                                        "type": "string",
+                                        "description": "X Telegram API Token."
+                                    },
+                                    "x_access_token": {
+                                        "type": "string",
+                                        "description": "X Telegram API Token."
+                                    },
+                                    "x_access_token_secret": {
+                                        "type": "string",
+                                        "description": "X Telegram API Token."
+                                    }
+                                },
+                                "required": [
+                                    "name",
+                                    "type"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Notification handler created successfully.",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/notification-handlers/{notification_handler_id}": {
+            "get": {
+                "summary": "Retrieve a specific notification handler",
+                "operationId": "retrieveNotificationHandler",
+                "parameters": [
+                    {
+                        "name": "notification_handler_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Notification handler details.",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1,
+                                        "type": "email",
+                                        "name": "Work email",
+                                        "settings": {
+                                            "email": "hey@example.com"
+                                        },
+                                        "is_enabled": true,
+                                        "last_datetime": null,
+                                        "datetime": "2021-06-27 22:16:23"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "summary": "Update a notification handler",
+                "operationId": "updateNotificationHandler",
+                "parameters": [
+                    {
+                        "name": "notification_handler_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "type": {
+                                        "type": "string",
+                                        "enum": [
+                                            "email",
+                                            "webhook",
+                                            "slack",
+                                            "discord",
+                                            "telegram",
+                                            "microsoft_teams"
+                                        ]
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    },
+                                    "webhook": {
+                                        "type": "string"
+                                    },
+                                    "slack": {
+                                        "type": "string"
+                                    },
+                                    "discord": {
+                                        "type": "string"
+                                    },
+                                    "telegram": {
+                                        "type": "string"
+                                    },
+                                    "telegram_chat_id": {
+                                        "type": "string"
+                                    },
+                                    "is_enabled": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Notification handler updated successfully.",
+                        "content": {
+                            "application/json": {
+                                "example": {
+                                    "data": {
+                                        "id": 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Delete a notification handler",
+                "operationId": "deleteNotificationHandler",
+                "parameters": [
+                    {
+                        "name": "notification_handler_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Notification handler deleted successfully."
+                    }
+                }
+            }
+        }
+    }
+}

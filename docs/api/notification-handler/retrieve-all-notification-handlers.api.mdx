@@ -1,0 +1,71 @@
+---
+id: retrieve-all-notification-handlers
+title: "Retrieve all notification handlers"
+description: "Retrieve all notification handlers"
+sidebar_label: "Retrieve all notification handlers"
+hide_title: true
+hide_table_of_contents: true
+api: eJy9VU2P0zAQ/SvWHDh52ySoIFlCUAkEe0ErBOJQVStvM2nMOrbXnuxuVeW/o3HT7lcFK0D00oxjz7z3PPOyBR8wajLendagICJFg9c4t/azJ9OYVX73SbvaYkwgIeioOyQO1GILTncICoJeI0gwDhRc9Rg3IKHGtIom8HlQ8LVFwbuE67sLjIJaTWLje3GjHYmIqbeURBN9NxHvsdE5JC/KCUiIeNWbiDWoRtuEEtKqxU6D2gJtAgMwjnCNMZfNh0GVwyAPAMcC5wHj+e/BfvI3otNuc8B1ABowZhoTMbfW32AtrrXtMQkdUYmykKKaSTErpCiLHBQc7cLiIbNq9sfUqpkEdH0HalEWsprJWSG5HpfjalxsOQxLTp+CdwkTJ6yKgv8ecp0LaxIJ3wh378ZFO145Y1x5R+iIz+oQ7Lhl+iNxgi3gre6CxZxak859YWpQpdxTwE4bC3J/Gd99vBT7tYRExq0zwN2aghY378ask5XvYJBg0jk6fWFZKYo9SrA60XmtCclwVtdbK+EuhqqoypPi1Un1WlSVKl+p6iWwJB1Slje3AYN80htZX/Kk7Y4EP+U3ibtKgjXuMuNtTEzEeIlCUtPpyrvkLU6MS6Qb33lGP9XBTO9re7LX9u0LTvqmhB2Zf5LI4S3txQgRr/fPCW3zDwoM+fd4Xr6MtiG0tcfbCLLurWeTWSNlI6EWFByvl/siXu9dpo/2Odjz9RrX+Dw9hrgn4XS/S8zPTkECJ92hLifFpHgy+/OzU9H4yPOv18atj/MRxolD5gk3aPCJOp0HYmzzZ6nyoPhh5glvaRqsNo5TZ/rbUbEFHFdsKaH13EQL2G4vdMJv0Q4DL+88jnWsTRpHaDSbR9UPg/53dn2UxCVu7j4U2TRBAbBFPx/Vf/TlX3A48i2547PkIBomBGqxHCS0qGuMWf/d+flqhYHunXpiqqNN7cbl44evMAw/AX/Zl/s=
+sidebar_class_name: "get api-method"
+info_path: docs/api/notification-handler/instafomo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Retrieve all notification handlers"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"get"}
+  path={"/notification-handlers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Retrieve all notification handlers
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"page","in":"query","description":"The page number that you want results from. Defaults to 1.","required":false,"schema":{"type":"integer","default":1}},{"name":"results_per_page","in":"query","description":"How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.","required":false,"schema":{"type":"integer","default":25,"enum":[10,25,50,100,250,500,1000]}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"A list of notification handlers.","content":{"application/json":{"example":{"data":[{"id":1,"type":"email","name":"Work email","settings":{"email":"hey@example.com"},"is_enabled":true,"last_datetime":null,"datetime":"2021-06-27 22:16:23"}],"meta":{"page":1,"results_per_page":25,"total":1,"total_pages":1},"links":{"first":"https://console.instafomo.com/api/notification-handlers?&page=1","last":"https://console.instafomo.com/api/notification-handlers?&page=1","next":null,"prev":null,"self":"https://console.instafomo.com/api/notification-handlers?&page=1"}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

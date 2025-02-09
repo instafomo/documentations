@@ -1,0 +1,71 @@
+---
+id: delete-a-campaign
+title: "Delete a campaign"
+description: "Delete a campaign"
+sidebar_label: "Delete a campaign"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFlEGL2zAQhf+KmFMLapyWnkQppE0KKT0sbUoPwZSJPY5FbMkrycu6Rv+9jB17kxDYky0zevPm07N6aNBhTYGcB7XvwWBNoGDVhtI6/Q+DtgYkaAMKSsKcHEhw9NhqRzmo4FqSkJPPnG6GWgVfCB05EeyJeKvPSqoRVA+ha1jbB6fNESTQM9ZNRS9bPmGj352o+wwxytlLhnWD+mj+6nxy0mAoX/WxXQtbiFCSmBREsCKnigIt7hnTJtCRHMSYsrZvrPHkueDD8iM/rvW/TqqjZC58m2XkfdFWVccTgKesdTp0A9nDMCODBbVPucW13HpQETi7BQk1hdLmoGBsAXKcXEEyFfmkv+ATeSxyT9Nptq7icwuh8SpJMmu8rWihjQ9Y2NouMlsn2GhgN5PZX4xlHPvS8kyJ1SZ6vB6LQJ5fvllXYwAF3//sBgjaFHbYrsNw1tupu5gAerF62IIEtj2yeL9YLpZwS2j1sBWFdaJGg0dtjjMpL7QRs+4CooTG+lCj4cbnGN3je6U/TxjoOSRNhdqw0sCwP4Pfz2n0IEFdRjOVUFofuKbvD+jpt6ti5M+PLTnOQCrhCZ3GA3PY95Brz+85qAIrf5vfHjJrAhlm+ebnOelvxWupvjvD+SOajjFj1fIKJJyou/nBYhovYrfe/NjsNiABrzNwc+bDNHd79P1YsePLIMa55Xg5xDTG+B9Z94r3
+sidebar_class_name: "delete api-method"
+info_path: docs/api/campaigns/instafomo-campaigns-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Delete a campaign"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"delete"}
+  path={"/campaigns/{campaign_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Delete a campaign
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Authorization","in":"header","required":true,"description":"Bearer token","schema":{"type":"string","example":"Bearer <api-key>"}},{"name":"campaign_id","in":"path","required":true,"description":"ID of the campaign to delete.","schema":{"type":"integer"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={undefined}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"204":{"description":"Campaign deleted successfully"}}}
+>
+  
+</StatusCodes>
+
+
+      

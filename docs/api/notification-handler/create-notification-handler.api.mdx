@@ -1,0 +1,71 @@
+---
+id: create-notification-handler
+title: "Create a new notification handler"
+description: "Create a new notification handler"
+sidebar_label: "Create a new notification handler"
+hide_title: true
+hide_table_of_contents: true
+api: eJytlW9r2zAQxr+KuFcbqEm7l4a92NrBAqMra8oGIQRFPsdq9ceV5LYh+LuPk5w0abKm0L2ykM+/e3R3erwC16AXUTk7KqEA6VFEvHRRVUqm7e/Clho9cPB432KIX125hGIF0tmINtLStDqqRvg4rJw3J6WIgraDrNGkVVw2CAW4+S3KCBwaT2mjwkBvrTC4FRWiV3YBHEoM0quGVEAB4xoZRTJXsUjrLZGszioH0PEes49D2xooJoBGKA0cHnFeO3cHHIIWkp6lCtL5EjhE1LjwwgAHo6R3wVVxFlGYANNDwijXUWE58dGDfqMwJsrSYwjsg7N6ySrnU47PifEx4db6jwJ/50B28+vHS1zPyMBchqO4awpjj/+GJk5Grit6FHqRA1/D9qwM3jTo+Nz0kezL1YiN3R3al+A1a5c8k7WIM/UG7ZsM57WIbHTxOv9pJp0NrUE/u8Plcfoftn+Cl6CA0mN8F0tIiSHMIm39N9B7hXXZdZTHkm5uMor+gk+7Lr8OjbMhG8mn0zN67KIvD1xHln2uZKFNaqtW6+UA+LapiabR/WfD2+BSUfBJmEYnd1mbHA3IWddlNbuZz1MSJpjFx4OuQO6CsXbkvI0LyRlFrKGA4Xb4SR8eyKrQP9CqmKyg9RoKqGNsQjEc0jA4jQNlQxSVM24gnRmKRkE35aBs5VIbVCT9MFpHUb2BA0Gz6rPB6eB0r0HUFRpoI6xYKLs4eJ7AlGUbcpoHOpYR9tnm31SVndyb2Yn4FIeNFsoSOZ1+1RdsAocLNuVQU2GLCaxWcxHwxuuuo+37Fv0SismUw4PwSsypLJNpx6FGUaJPFU4XFM7zUJyMSQaF65bkHPrrdXz90RcpsYlb4XvzRG3ZtP/q5/UYOMz7n6txJX1D4MTlz0sS2XV/Ae2JsB8=
+sidebar_class_name: "post api-method"
+info_path: docs/api/notification-handler/instafomo-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Create a new notification handler"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/notification-handlers"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Create a new notification handler
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={undefined}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"name":{"type":"string","description":"The name of the notification handler."},"type":{"type":"string","enum":["email","webhook","slack","discord","telegram","microsoft_teams"],"description":"The type of the notification handler."},"email":{"type":"string","description":"Email address (only for type=email)."},"webhook":{"type":"string","description":"Webhook URL (only for type=webhook)."},"slack":{"type":"string","description":"Slack webhook URL (only for type=slack)."},"discord":{"type":"string","description":"Discord webhook URL (only for type=discord)."},"telegram":{"type":"string","description":"Telegram API Token (only for type=telegram)."},"telegram_chat_id":{"type":"string","description":"Telegram Chat ID (only for type=telegram)."},"x_consumer_key":{"type":"string","description":"X Telegram API Token."},"x_consumer_secret":{"type":"string","description":"X Telegram API Token."},"x_access_token":{"type":"string","description":"X Telegram API Token."},"x_access_token_secret":{"type":"string","description":"X Telegram API Token."}},"required":["name","type"]}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"201":{"description":"Notification handler created successfully.","content":{"application/json":{"example":{"data":{"id":1}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

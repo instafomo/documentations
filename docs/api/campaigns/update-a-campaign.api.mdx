@@ -1,0 +1,71 @@
+---
+id: update-a-campaign
+title: "Update a campaign"
+description: "Update a campaign"
+sidebar_label: "Update a campaign"
+hide_title: true
+hide_table_of_contents: true
+api: eJyFldtu2zAMhl/F4NUGqEm6S2MY0HYYkN2sWFPsIggCxmYStdahklw0M/TuA+VDDvXQXDk2Sf/6+ZFuwKJDRYGch3zZgEZFkMNNHfbGyb8YpNEgQGrIYU9YkgMBjl5q6aiEPLiaBJTkCydtis3hltCRy4J5Jk71xZ4UQt5AOFiu7YOTegcC6A2VreiY8hWtvHqmwzeIUQxaClQW5U6vZdkrsRj2H+qYf8/MNgt7yvoKWTBZbUsMNBkTJnWgHTmIcdXWJh9uTXngkOOrtlh5ElAYHUgHfqbqKkiLLky3xqmrEkOq+q6+2TxREUCAdcaSC5I8Py2NQplONyJFdC5cuhdFlzf6aONQl1Lv1v9NHiJqV40GkEJZrR1Z44I/iUDn8MB9CKT8qHkCpF+Txk1Fp0faGFMRaojpxwZ7a7RvPfgymyUrzhp417et7VmZ+booyPttXVUs4aQFaG0li0Tr9Mmb5MqAVwN9S9jj616Ap6J2MhwS95tEIGMP+XLFAJxreUwSMhxYAgGKwt6UjKPxqa1MZQ7TPsRPmxN2IyNH7rWftGQ87EOwPp9OC6O9qWgitQ+4NcpMCqOmaCWwll7qAyPVOnYqePCYq/VkJ89TEIju4odxCgPk8PPPom2U3pqULkOaw3n/9qz33mc393MQwLJbJ64ns8kMLv25uZ9nW+MyhRp3Uu8Gn3wmdTbUnTBabJfC1KNuxMfcPas/nDDQW5jaisGPAjp4W+OXw6bwICA/XRsrAXvuUb6Eptmgp0dXxci3X2pyTMBKwCs6ydCm7pTSdwB3834hZ2APPv3uVsPn7KONM3qGfq40I/2KVc3/QMAzHS6WX1xF0S9h1thG3LVKrhZc51hhbCnxUm2TboqCbDgJfzdAjN0A+P2vhwVT1C1DZUrO4cKprjhe8vAIwHMsLzBM4keP3TRtxIK/HTEOLrTfkriKMf4DJlhO5g==
+sidebar_class_name: "post api-method"
+info_path: docs/api/campaigns/instafomo-campaigns-api
+custom_edit_url: null
+---
+
+import MethodEndpoint from "@theme/ApiExplorer/MethodEndpoint";
+import ParamsDetails from "@theme/ParamsDetails";
+import RequestSchema from "@theme/RequestSchema";
+import StatusCodes from "@theme/StatusCodes";
+import OperationTabs from "@theme/OperationTabs";
+import TabItem from "@theme/TabItem";
+import Heading from "@theme/Heading";
+
+<Heading
+  as={"h1"}
+  className={"openapi__heading"}
+  children={"Update a campaign"}
+>
+</Heading>
+
+<MethodEndpoint
+  method={"post"}
+  path={"/campaigns/{campaign_id}"}
+  context={"endpoint"}
+>
+  
+</MethodEndpoint>
+
+
+
+Update a campaign
+
+<Heading
+  id={"request"}
+  as={"h2"}
+  className={"openapi-tabs__heading"}
+  children={"Request"}
+>
+</Heading>
+
+<ParamsDetails
+  parameters={[{"name":"Authorization","in":"header","required":true,"description":"Bearer token","schema":{"type":"string","example":"Bearer <api-key>"}},{"name":"campaign_id","in":"path","required":true,"description":"ID of the campaign to update.","schema":{"type":"integer"}}]}
+>
+  
+</ParamsDetails>
+
+<RequestSchema
+  title={"Body"}
+  body={{"required":false,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"domain_id":{"type":"integer"},"name":{"type":"string"},"domain":{"type":"string"},"branding_name":{"type":"string"},"branding_url":{"type":"string"},"email_reports":{"type":"array","items":{"type":"integer"}},"is_enabled":{"type":"boolean"}}}}}}}
+>
+  
+</RequestSchema>
+
+<StatusCodes
+  id={undefined}
+  label={undefined}
+  responses={{"200":{"description":"Campaign updated successfully","content":{"application/json":{"example":{"data":{"id":1}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      
