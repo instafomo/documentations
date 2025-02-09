@@ -7,7 +7,7 @@ hide_title: true
 hide_table_of_contents: true
 api: eJyVVdtu2zAM/RWBz2rS7tEYBrTrBmQYtmJr0YcgKBibidVal0ry2izQvw+UL3OaXd+EhOQ55Dmk9+DQo6ZIPkCx3INBTVDAeRtr69V3jMoakKAMFFATVuRBgqfHVnmqoIi+JQkVhdIrl2MLuCD05EW0D8SpoaxJIxR7iDvHtUP0ymxBAj2jdg39THmNTp080O4NpLTqYCjEC1vtOP0lamlNJBP5L902UTn0cb6xXp9UGDPgEbRd31MZQYLz1pGPigL/W1mNytypahKqTKRt7vawu8scKxaXM0iyH9dxa4c5n1CTsBsRaxIlaodqa2YHA3jXv5Lsyfy9aE8EQ7ClwkiVeFKx/gNG/5qVVjPO2qOplNne/VsPF3244PDZQYHWN/+Rf/PlY04njaq58+Ssj2GSj97jji0XSYdfCJKOpmuj2qgyW1XUaKqGvFhchoyiwh0ZXDc01XZtbUNojjje1hRrtu5khkIF0VeYQUpT8y87+UfJVil1AcFZEzprvTo9yw47wHk71C49ZeVCW5YUwqZtGm594mx0rul7m98Hm30xSrqHwels3bOUOgKBytaruMsLvc6rxfsMxXLFa/WCS6YgUBh6GpsGCZpibSsowNmQNwa5AsyHkDDn3Sb/bbgc2QVQx+hCMZ+X1gTb0EyZEHFjtWXbzdEpYAoDw6+8oN2gpjxHobjacEKycDkIZP94b73GCAV8uL3O2iizsTldxWz5xYAuhpEHcX61AAlMuxvA2ex0dnpkhfOrhdhYLzQa3LJtx74Fb//YFXuMJ6QxS9Ofz98N9QBj7DLSc5y7hi2UJPTb1M17CSMuSICVhJrlKJaw368x0I1vUuKfH1vyLPhKwjf0iv2a9ZbD1WaJHmjH5Dp3nVwzOoc3LbP41Q1Nckg6L0tycRJ+ZEzWdTTN1eev1yxTf7q1rTiHC+e68uezI4mHur/QOZMfzoPZTVjs913ENX9sUgLZ0+0+Pok38gdV8F+0
 sidebar_class_name: "post api-method"
-info_path: docs/api/campaigns/instafomo-campaigns-api
+info_path: api/campaigns/instafomo-campaigns-api
 custom_edit_url: null
 ---
 
@@ -23,13 +23,18 @@ import Heading from "@theme/Heading";
   as={"h1"}
   className={"openapi__heading"}
   children={"Create a new campaign"}
-></Heading>
+>
+</Heading>
 
 <MethodEndpoint
   method={"post"}
   path={"/campaigns/"}
   context={"endpoint"}
-></MethodEndpoint>
+>
+  
+</MethodEndpoint>
+
+
 
 Create a new campaign
 
@@ -38,66 +43,29 @@ Create a new campaign
   as={"h2"}
   className={"openapi-tabs__heading"}
   children={"Request"}
-></Heading>
+>
+</Heading>
 
 <ParamsDetails
-  parameters={[
-    {
-      name: "Authorization",
-      in: "header",
-      required: true,
-      description: "Bearer token",
-      schema: { type: "string", example: "Bearer <api-key>" },
-    },
-  ]}
-></ParamsDetails>
+  parameters={[{"name":"Authorization","in":"header","required":true,"description":"Bearer token","schema":{"type":"string","example":"Bearer <api-key>"}}]}
+>
+  
+</ParamsDetails>
 
 <RequestSchema
   title={"Body"}
-  body={{
-    required: true,
-    content: {
-      "multipart/form-data": {
-        schema: {
-          type: "object",
-          properties: {
-            domain_id: { type: "integer", description: "Domain ID." },
-            name: {
-              type: "string",
-              description: "Name of the campaign.",
-              example: "Example",
-            },
-            domain: {
-              type: "string",
-              description: "Domain associated with the campaign.",
-              example: "example.com",
-            },
-            branding_name: { type: "string", description: "Branding name." },
-            branding_url: { type: "string", description: "Branding URL." },
-            email_reports: {
-              type: "array",
-              items: { type: "integer" },
-              description: "Notification handler IDs.",
-            },
-            is_enabled: {
-              type: "boolean",
-              description: "Whether the campaign is enabled.",
-            },
-          },
-          required: ["name", "domain"],
-        },
-      },
-    },
-  }}
-></RequestSchema>
+  body={{"required":true,"content":{"multipart/form-data":{"schema":{"type":"object","properties":{"domain_id":{"type":"integer","description":"Domain ID."},"name":{"type":"string","description":"Name of the campaign.","example":"Example"},"domain":{"type":"string","description":"Domain associated with the campaign.","example":"example.com"},"branding_name":{"type":"string","description":"Branding name."},"branding_url":{"type":"string","description":"Branding URL."},"email_reports":{"type":"array","items":{"type":"integer"},"description":"Notification handler IDs."},"is_enabled":{"type":"boolean","description":"Whether the campaign is enabled."}},"required":["name","domain"]}}}}}
+>
+  
+</RequestSchema>
 
 <StatusCodes
   id={undefined}
   label={undefined}
-  responses={{
-    "201": {
-      description: "Campaign created successfully",
-      content: { "application/json": { example: { data: { id: 1 } } } },
-    },
-  }}
-></StatusCodes>
+  responses={{"201":{"description":"Campaign created successfully","content":{"application/json":{"example":{"data":{"id":1}}}}}}}
+>
+  
+</StatusCodes>
+
+
+      

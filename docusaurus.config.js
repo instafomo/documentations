@@ -3,6 +3,7 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
+import { generateOpenAPIConfigs } from "./src/helpers/openapiConfig.js";
 
 import { themes as prismThemes } from "prism-react-renderer";
 
@@ -42,43 +43,10 @@ const config = {
       {
         id: "api-docs",
         docsPluginId: "classic",
-        config: {
-          campaigns: {
-            specPath: "src/apiSchema/campaigns.json", // Path to your OpenAPI file
-            outputDir: "docs/api/campaigns", // Output directory
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          },
-          notificationHandler: {
-            specPath: "src/apiSchema/notification-handler.json", // Path to your OpenAPI file
-            outputDir: "docs/api/notification-handler", // Output directory
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          },
-          notification: {
-            specPath: "src/apiSchema/notifications.json", // Path to your OpenAPI file
-            outputDir: "docs/api/notifications", // Output directory
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          },
-          user: {
-            specPath: "src/apiSchema/user.json", // Path to your OpenAPI file
-            outputDir: "docs/api/user", // Output directory
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          },
-          logs: {
-            specPath: "src/apiSchema/logs.json", // Path to your OpenAPI file
-            outputDir: "docs/api/logs", // Output directory
-            sidebarOptions: {
-              groupPathsBy: "tag",
-            },
-          },
-        },
+        config: generateOpenAPIConfigs(
+          "src/apiSchema", // Directory containing OpenAPI specs
+          "docs/api" // Output directory for generated docs
+        ),
       },
     ],
   ],
