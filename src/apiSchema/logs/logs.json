@@ -17,6 +17,15 @@
                 "operationId": "retrieveAllLogs",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    },
+                    {
                         "name": "page",
                         "in": "query",
                         "description": "The page number that you want results from. Defaults to 1.",

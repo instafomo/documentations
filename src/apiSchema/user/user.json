@@ -1,53 +1,63 @@
 {
-    "openapi": "3.0.0",
-    "info": {
-      "title": "Instafomo API",
-      "version": "1.0.0",
-      "description": "API for retrieving user information in Instafomo."
-    },
-    "servers": [
-      {
-        "url": "https://console.instafomo.com/api"
-      }
-    ],
-    "paths": {
-      "/user": {
-        "get": {
-          "summary": "Retrieve user information",
-          "operationId": "retrieveUser",
-          "responses": {
-            "200": {
-              "description": "User information details.",
-              "content": {
-                "application/json": {
-                  "example": {
-                    "data": {
-                      "id": "1",
-                      "type": "users",
-                      "email": "example@example.com",
-                      "billing": {
-                        "type": "personal",
-                        "name": "John Doe",
-                        "address": "Lorem Ipsum",
-                        "city": "Dolor Sit",
-                        "county": "Amet",
-                        "zip": "5000",
-                        "country": "",
-                        "phone": "",
-                        "tax_id": "",
-                        "is_enabled": true,
-                        "plan_id": "custom",
-                        "plan_expiration_date": "2025-12-12 00:00:00",
-                        "plan_settings": {},
-                        "plan_trial_done": false
-                      },
-                      "language": "english",
-                      "timezone": "UTC",
-                      "country": null,
-                      "date": "2020-01-01 00:00:00",
-                      "last_activity": "2020-01-01 00:00:00",
-                      "total_logins": 10
-                    }
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Instafomo API",
+    "version": "1.0.0",
+    "description": "API for retrieving user information in Instafomo."
+  },
+  "servers": [
+    {
+      "url": "https://console.instafomo.com/api"
+    }
+  ],
+  "paths": {
+    "/user": {
+      "get": {
+        "summary": "Retrieve user information",
+        "operationId": "retrieveUser",
+        "parameters": [
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "example": "Bearer {api_key}"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "User information details.",
+            "content": {
+              "application/json": {
+                "example": {
+                  "data": {
+                    "id": "1",
+                    "type": "users",
+                    "email": "example@example.com",
+                    "billing": {
+                      "type": "personal",
+                      "name": "John Doe",
+                      "address": "Lorem Ipsum",
+                      "city": "Dolor Sit",
+                      "county": "Amet",
+                      "zip": "5000",
+                      "country": "",
+                      "phone": "",
+                      "tax_id": "",
+                      "is_enabled": true,
+                      "plan_id": "custom",
+                      "plan_expiration_date": "2025-12-12 00:00:00",
+                      "plan_settings": {},
+                      "plan_trial_done": false
+                    },
+                    "language": "english",
+                    "timezone": "UTC",
+                    "country": null,
+                    "date": "2020-01-01 00:00:00",
+                    "last_activity": "2020-01-01 00:00:00",
+                    "total_logins": 10
                   }
                 }
               }
@@ -57,4 +67,4 @@
       }
     }
   }
-  
+}

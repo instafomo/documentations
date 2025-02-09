@@ -22,7 +22,7 @@
                         "description": "Bearer token",
                         "schema": {
                             "type": "string",
-                            "example": "Bearer <api-key>"
+                            "example": "Bearer {api_key}"
                         }
                     },
                     {
@@ -110,7 +110,7 @@
                         "description": "Bearer token",
                         "schema": {
                             "type": "string",
-                            "example": "Bearer <api-key>"
+                            "example": "Bearer {api_key}"
                         }
                     }
                 ],
@@ -195,7 +195,7 @@
                         "description": "Bearer token",
                         "schema": {
                             "type": "string",
-                            "example": "Bearer <api-key>"
+                            "example": "Bearer {api_key}"
                         }
                     },
                     {
@@ -250,7 +250,7 @@
                         "description": "Bearer token",
                         "schema": {
                             "type": "string",
-                            "example": "Bearer <api-key>"
+                            "example": "Bearer {api_key}"
                         }
                     },
                     {
@@ -329,7 +329,7 @@
                         "description": "Bearer token",
                         "schema": {
                             "type": "string",
-                            "example": "Bearer <api-key>"
+                            "example": "Bearer {api_key}"
                         }
                     },
                     {
