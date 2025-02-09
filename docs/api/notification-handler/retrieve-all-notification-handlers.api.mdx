@@ -5,7 +5,7 @@ description: "Retrieve all notification handlers"
 sidebar_label: "Retrieve all notification handlers"
 hide_title: true
 hide_table_of_contents: true
-api: eJy9VU2P0zAQ/SvWHDh52ySoIFlCUAkEe0ErBOJQVStvM2nMOrbXnuxuVeW/o3HT7lcFK0D00oxjz7z3PPOyBR8wajLendagICJFg9c4t/azJ9OYVX73SbvaYkwgIeioOyQO1GILTncICoJeI0gwDhRc9Rg3IKHGtIom8HlQ8LVFwbuE67sLjIJaTWLje3GjHYmIqbeURBN9NxHvsdE5JC/KCUiIeNWbiDWoRtuEEtKqxU6D2gJtAgMwjnCNMZfNh0GVwyAPAMcC5wHj+e/BfvI3otNuc8B1ABowZhoTMbfW32AtrrXtMQkdUYmykKKaSTErpCiLHBQc7cLiIbNq9sfUqpkEdH0HalEWsprJWSG5HpfjalxsOQxLTp+CdwkTJ6yKgv8ecp0LaxIJ3wh378ZFO145Y1x5R+iIz+oQ7Lhl+iNxgi3gre6CxZxak859YWpQpdxTwE4bC3J/Gd99vBT7tYRExq0zwN2aghY378ask5XvYJBg0jk6fWFZKYo9SrA60XmtCclwVtdbK+EuhqqoypPi1Un1WlSVKl+p6iWwJB1Slje3AYN80htZX/Kk7Y4EP+U3ibtKgjXuMuNtTEzEeIlCUtPpyrvkLU6MS6Qb33lGP9XBTO9re7LX9u0LTvqmhB2Zf5LI4S3txQgRr/fPCW3zDwoM+fd4Xr6MtiG0tcfbCLLurWeTWSNlI6EWFByvl/siXu9dpo/2Odjz9RrX+Dw9hrgn4XS/S8zPTkECJ92hLifFpHgy+/OzU9H4yPOv18atj/MRxolD5gk3aPCJOp0HYmzzZ6nyoPhh5glvaRqsNo5TZ/rbUbEFHFdsKaH13EQL2G4vdMJv0Q4DL+88jnWsTRpHaDSbR9UPg/53dn2UxCVu7j4U2TRBAbBFPx/Vf/TlX3A48i2547PkIBomBGqxHCS0qGuMWf/d+flqhYHunXpiqqNN7cbl44evMAw/AX/Zl/s=
+api: eJy9VcGO2zYQ/RViDj1xbUmBU0BA0bhokOwlCIIUPRiGwbVGFrMUyZCj3XUF/XsxlGTvZo100Qb1xRqKnHlv9OaxB+cxKNLOXldQQkAKGu9wbcwHR7rW+/TuvbKVwRBBgldBtUgclJserGoRSlh31Lig/0q7QYK2UEKDqsIAEgJ+7XTACkoKHUqI+wZbBWUPdPR8PFLQ9gAS8EG13vDSb6gCBtErr3e3eBxgGOSpnFcHnKt87TAcQUKFcR+0TwBK+Nyg4F3Cdu0NBkGNInF0nbhXlkTA2BmKog6uXYjfsVYpJCfyxRO8tTLxEmBtCQ+JWzUehjJ/DHAqsPMYdv8M9r27F62yxxOuE1CPIdFYiLUx7h4rcadMh1GogKXIMymKlRSrTIo8S0HG0RhmT5kVq39NrVhJQNu1UG7yTBYrucok1+NyXI2LbYdhy+mjdzZi5IRFlvHfU65rYXQk4WphHwlMNJPCGOPeWUJLfFZ5b6Ytyy+RE/RnjfRQKVJJhrqCMpczBWyVNiDnj/GnC7diXotIpO0hARzXWKjHN1PWxd61MEjQcYdW3ZizaI2KtKsUIWnOajtjJJxjKLIiv8peXxU/i6Io89dl8Qq4JS1Sam+SAYN8po3UX3KkzEiCn9KbyKqSYLS9TXhrHSIxXiIfy+Vy72x0BhfaRlK1ax2jXyqvl497ezX39tefOOkvOYxkfkgiiw80N8MHvJufI5r6BxQY0u/befk0uZRQxlyWEaS+N4497YCUfIsaKOFyvaSLcDebWhfMS7Cnz6tt7dL0aEq+dT3vEuuP1yCBk46o80W2yJ7N/vrjtahd4PlXB20Pl/kIbcUp84IF6l2kVqWBmGT+oq48KX6aecIHWnqjtOXUiX4/dWwDlzu2ldA4FtEG+v5GRfwjmGHg5dHjuI+VjtMITWbzTfXToP83u75I4haP54simSaUAGzRL0f1P/rydzhcuEvOfLYcBM2EoNxsBznfutz/8fx6v0dPj049M9XJpsZxeff2MwzD3+ojvj8=
 sidebar_class_name: "get api-method"
 info_path: api/notification-handler/instafomo-api
 custom_edit_url: null
@@ -47,7 +47,7 @@ Retrieve all notification handlers
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"page","in":"query","description":"The page number that you want results from. Defaults to 1.","required":false,"schema":{"type":"integer","default":1}},{"name":"results_per_page","in":"query","description":"How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.","required":false,"schema":{"type":"integer","default":25,"enum":[10,25,50,100,250,500,1000]}}]}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}},{"name":"page","in":"query","description":"The page number that you want results from. Defaults to 1.","required":false,"schema":{"type":"integer","default":1}},{"name":"results_per_page","in":"query","description":"How many results you want per page. Allowed values are: 10, 25, 50, 100, 250, 500, 1000. Defaults to 25.","required":false,"schema":{"type":"integer","default":25,"enum":[10,25,50,100,250,500,1000]}}]}
 >
   
 </ParamsDetails>

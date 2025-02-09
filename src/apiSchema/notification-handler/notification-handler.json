@@ -17,6 +17,15 @@
                 "operationId": "retrieveAllNotificationHandlers",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    },
+                    {
                         "name": "page",
                         "in": "query",
                         "description": "The page number that you want results from. Defaults to 1.",
@@ -87,6 +96,17 @@
             "post": {
                 "summary": "Create a new notification handler",
                 "operationId": "createNotificationHandler",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    }
+                ],
                 "requestBody": {
                     "content": {
                         "multipart/form-data": {
@@ -180,6 +200,15 @@
                 "operationId": "retrieveNotificationHandler",
                 "parameters": [
                     {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    },
+                    {
                         "name": "notification_handler_id",
                         "in": "path",
                         "required": true,
@@ -215,6 +244,15 @@
                 "summary": "Update a notification handler",
                 "operationId": "updateNotificationHandler",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    },
                     {
                         "name": "notification_handler_id",
                         "in": "path",
@@ -289,6 +327,15 @@
                 "summary": "Delete a notification handler",
                 "operationId": "deleteNotificationHandler",
                 "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "example": "Bearer {api_key}"
+                        }
+                    },
                     {
                         "name": "notification_handler_id",
                         "in": "path",

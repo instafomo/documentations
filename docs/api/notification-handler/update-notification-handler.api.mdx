@@ -5,7 +5,7 @@ description: "Update a notification handler"
 sidebar_label: "Update a notification handler"
 hide_title: true
 hide_table_of_contents: true
-api: eJyFVMlu2zAQ/RVhTi3AWEmPvKW91Jc2aJOTYRhjamQx4RaSSmsI+vditDhOoqS6kOI8vtkepwMfKGLW3q0rkNCGCjP98FnXWg3H39FVhiIICBjRUqaYQG46cGgJJLgz7K4ZwTtdgQDtQELA3ICASI+tjlSBzLElAUk1ZBFkB/kYmEa7TAeK0PfbEU0pf/XVkSHKu0wu89a2JuuAMZe1j/aiwjyQvKHz+3tSmYOOnGDWlNg6xnxCpRy1O0AvpoPXBgHkWgtyA2RRGxDwh/aN9w8gIBlUvFY6KR8530yGDhEtCLBaRZ98nXeZ0CbY9mKiWHI+ky7ZRjdLltnxYjpzKB8Zd6rBzK1aAum0I4d7Q+fmvfeG0EE/fNynFLxLY22/XF7yUlFSUQeWA0g4V1IxqaMYRVYVqVWKUqpbY44rEOd9xhDMdK28T0zVAf1FG8zQprnvHPzVHM1Lz3eDkwILtxACt4hy41nywadBKCxUCeU5/GKCp7J7R+Y9K4Hi0/wo2mhAQpNzSLIslXfJG1pplzLW3vqV8rbEoIFVrl3th+LqzFnBekYV1zdrEMCkYy5Xq8vVJbzO8PpmXdQ+FhYdHrQ7LGaaCu2KE/OKW8sJW3TP7+G/tXrh96SGTH9zGQxqx6xD5t1Uxg0slhEEyPfmxVZAw52QG+i6PSa6i6bv+fixpXgEudkKeMKoWZRDrSudJoHWaBK9CfMkJ/j0axo/nwsQy+FPh+iOXHk0Lf+BgAc6fjDken7YDWFFcQhpRH8bHV/cMucz29Ls6sV86VopCvkM/uYJsGZOqr35+fsWBOynEWl9xXeYeOAVz1u52fZ9/w+0KBF6
+api: eJyNVEtP20AQ/ivWnFppiUOPvoVemkuLWjhFUTRZj+OFfbG7pqSW/3s1foQAhtYX2/P45vXNtOA8BUzK2XUJBTS+xETfXVKVkr34G9pSUwABHgMaShQiFJsWLBqCAlZNql1Qf3pjEKAsFFATlr1PoIdGBSqhSKEhAVHWZBCKFtLRs3tMQdkDCKAnNF6z6IowUMha9Gp3T8cOuk6cwtmz1Hb1kNtOlVNgj6n+n7DKJjpQgK7bDtYU05Urj2winU1kE3+aRiflMaS8csFclJh6kDdwbn9HMnGPAvczKYqsHXJ+XWsnRsFME2xjoNgAGVQaBPymfe3cPQiIGiW/SxWlC1xvIk2HgAYEGCWDi65Ku0RoImw7MULMBZ9A53RDmDnNFHi2nCmVj5Q7WWPiUc0Zqbgji3tN5+q9c5rQQtc/PKfonY1Db78sl/wqKcqgfE++As6Jm43syAZOl1lspKQYq0br4wLE+ZzRez265XeRodpnQrYwzZ2Tv5yyeRn5tg+SYWZnUuARUaodb5h3sScKE7WA/Nz8YjSPefsOzTtmAoXHaQeboHnbUvKxyHPpbHSaFsrGhJUzbiGdydErYJYrW7m+uSr1a7aerLLV9RoEMOhQy+ViuVjC6wpX1+usciEzaPGg7GG20pgpm52QFzxaLtigfd6Hf/bqRdwTGxI9pdxrVJZR+8rbsY0bmG0jCCjeuxdbATVPothA2+4x0m3QXcfih4bCEYrNVsAjBsWk7HtdqjgStEId6U2aJzrBp5/j+fmcgZhPfxSiPXLnUTf8BwLu6fjBket4scfbyikN1l+HwBc3jPmMNne7+JAOTispyacz8zcrwJw5sfb6x68bELAfT6RxJfswcI8rnj+Lzbbrur/UuDe+
 sidebar_class_name: "post api-method"
 info_path: api/notification-handler/instafomo-api
 custom_edit_url: null
@@ -47,7 +47,7 @@ Update a notification handler
 </Heading>
 
 <ParamsDetails
-  parameters={[{"name":"notification_handler_id","in":"path","required":true,"schema":{"type":"integer"}}]}
+  parameters={[{"name":"Authorization","in":"header","required":true,"schema":{"type":"string","example":"Bearer {api_key}"}},{"name":"notification_handler_id","in":"path","required":true,"schema":{"type":"integer"}}]}
 >
   
 </ParamsDetails>
