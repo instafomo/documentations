@@ -116,7 +116,11 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          {
+            label: "Blog",
+            position: "left",
+            href: "https://instafomo.com/blogs/",
+          },
           {
             href: "https://console.instafomo.com/register?redirect=dashboard",
             label: "Sign In",
