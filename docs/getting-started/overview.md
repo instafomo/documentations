@@ -33,6 +33,8 @@ Integrating **Instafomo** into your website is simple and seamless. In just a fe
 - Click on **"Create Notification"**, which redirects you to the notification setup page.
 - For a quick start, select **"Coupon Code"** and click **"Create"**.
 
+> To know more about creating the notification refer to [Create Notification Guide](/docs/getting-started/create-notification.md)
+
 ### Step 5: Customize Your Notification
 
 - You’ll be redirected to the **Coupon Code Configuration** page.
