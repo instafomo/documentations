@@ -37,7 +37,21 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  scripts: [
+    {
+      src: "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.esm.js",
+      type: "module",
+    },
+    {
+      src: "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/cjs/orama-ui.cjs.js",
+      nomodule: true,
+    },
+  ],
+  stylesheets: [
+    "https://cdn.jsdelivr.net/npm/@orama/wc-components@latest/dist/orama-ui/orama-ui.css",
+  ],
   plugins: [
+    "./src/plugins/orama-search",
     [
       "docusaurus-plugin-openapi-docs",
       {
