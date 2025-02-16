@@ -34,7 +34,7 @@ InstaFomo conversion notifications are designed to enhance social proof and incr
 - **Notification Name:** Unique identifier for the notification.
 - **Conversion Title:** The main message of the notification. Supports dynamic variables using `{variable_name}`.
   - _This field accepts the usage of span HTML tag along with the style attribute._
-  - _You can insert dynamic variables from your Conversion Data. Example: If you have a field named full_name, you can use it as {full_name}._
+  - \_You can insert dynamic variables from your Conversion Data. Example: If you have a field named full_name, you can use it as `{full_name}`
 - **Conversion Description:** Additional information about the conversion. Also supports dynamic variables.
 - **Image Upload:** Supports `.jpg`, `.jpeg`, `.png`, `.svg`, `.gif`, `.webp`. Maximum allowed size is 1MB.
 - **Image Alt Text:** Text for accessibility and SEO purposes.
