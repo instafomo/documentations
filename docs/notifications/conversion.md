@@ -1,4 +1,4 @@
-# **InstaFomo Conversion Notifications**
+# Conversion Popup
 
 ## **Overview**
 

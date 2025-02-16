@@ -1,4 +1,4 @@
-# **InstaFomo Coupon Code Notifications**
+# Coupon Popup
 
 ## **Overview**
 
